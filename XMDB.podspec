@@ -133,8 +133,8 @@ Pod::Spec.new do |spec|
   # spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-    spec.source_files = 'XMDB/Vendors/*.framework/Headers/**.h'
-    spec.public_header_files = 'XMDB/Vendors/*.framework/Headers/**.h'
+  #spec.source_files = 'XMDB/Vendors/*.framework/Headers/**.h'
+  spec.public_header_files = 'XMDB/Vendors/*.framework/Headers/**.h'
   spec.vendored_frameworks =  'XMDB/Vendors/*.framework'
   #spec.vendored_libraries = 'XMDB/Vendors/thirdlibs/*.a'
   spec.dependency "FMDB", "~> 2.7"
