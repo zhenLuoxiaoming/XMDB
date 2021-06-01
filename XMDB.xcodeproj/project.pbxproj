@@ -14,6 +14,7 @@
 		E83C2DEC2660C91400E2B4F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83C2DEB2660C91400E2B4F1 /* Assets.xcassets */; };
 		E83C2DEF2660C91400E2B4F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E83C2DED2660C91400E2B4F1 /* LaunchScreen.storyboard */; };
 		E83C2DF92660CDDC00E2B4F1 /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83C2DF82660CDDC00E2B4F1 /* TestFile.swift */; };
+		E8FFA4EB2666392F004B99BB /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8FFA4EA2666392F004B99BB /* FMDB.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		E83C2DF02660C91400E2B4F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E83C2DF72660CAD300E2B4F1 /* Bridgh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridgh.h; sourceTree = "<group>"; };
 		E83C2DF82660CDDC00E2B4F1 /* TestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
+		E8FFA4EA2666392F004B99BB /* FMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FMDB.framework; sourceTree = "<group>"; };
 		EDAF6A2094D90C08FBFBFD75 /* Pods_XMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F46F1054AFACA25199405D7E /* Pods-XMDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMDB.release.xcconfig"; path = "Target Support Files/Pods-XMDB/Pods-XMDB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -37,6 +39,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAD9836C16553BA8B6D8F5F2 /* Pods_XMDB.framework in Frameworks */,
+				E8FFA4EB2666392F004B99BB /* FMDB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 		E83C2DE12660C91100E2B4F1 /* XMDB */ = {
 			isa = PBXGroup;
 			children = (
+				E8FFA4E92666392F004B99BB /* Vendors */,
 				E83C2DF72660CAD300E2B4F1 /* Bridgh.h */,
 				E83C2DF62660CAAB00E2B4F1 /* XMDB */,
 				E83C2DE22660C91100E2B4F1 /* AppDelegate.swift */,
@@ -99,6 +103,14 @@
 				E83C2DF82660CDDC00E2B4F1 /* TestFile.swift */,
 			);
 			path = XMDB;
+			sourceTree = "<group>";
+		};
+		E8FFA4E92666392F004B99BB /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				E8FFA4EA2666392F004B99BB /* FMDB.framework */,
+			);
+			path = Vendors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,6 +379,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KU7JG9F373;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XMDB/Vendors",
+				);
 				INFOPLIST_FILE = XMDB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -389,6 +405,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KU7JG9F373;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XMDB/Vendors",
+				);
 				INFOPLIST_FILE = XMDB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
