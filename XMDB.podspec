@@ -25,6 +25,7 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
+            这个就是描述啊啊啊啊
                    DESC
 
   spec.homepage     = "https://github.com/zhenLuoxiaoming"
@@ -132,5 +133,7 @@ Pod::Spec.new do |spec|
   # spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+  spec.vendored_frameworks =  'XMDB/Vendors/*.framework'
+  spec.vendored_libraries = 'XMDB/Vendors/thirdlibs/*.a'
   spec.dependency "FMDB", "~> 2.7"
 end

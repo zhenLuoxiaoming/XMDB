@@ -6,7 +6,7 @@
 //
 
 import Foundation
- 
+import FMDB
 open class GuaGua {
     //MARK:打开数据库
     static func openDB(dbname : String) -> FMDatabase? {
