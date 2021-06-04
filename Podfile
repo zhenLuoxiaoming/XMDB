@@ -7,4 +7,5 @@ target 'XMDB' do
 
   # Pods for XMDB
  pod 'FMDB',:git => 'https://github.com/ccgus/fmdb.git',:tag => '2.7'
+ pod 'KakaJSON', '~> 1.1.2'
 end

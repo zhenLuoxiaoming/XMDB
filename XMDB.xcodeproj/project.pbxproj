@@ -13,7 +13,9 @@
 		E83C2DEA2660C91100E2B4F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E83C2DE82660C91100E2B4F1 /* Main.storyboard */; };
 		E83C2DEC2660C91400E2B4F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83C2DEB2660C91400E2B4F1 /* Assets.xcassets */; };
 		E83C2DEF2660C91400E2B4F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E83C2DED2660C91400E2B4F1 /* LaunchScreen.storyboard */; };
-		E83C2DF92660CDDC00E2B4F1 /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83C2DF82660CDDC00E2B4F1 /* TestFile.swift */; };
+		E8888EF9266733AC00C8A918 /* XMDBModelTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8888EF6266733AC00C8A918 /* XMDBModelTool.swift */; };
+		E8888EFA266733AC00C8A918 /* XMDBModelMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8888EF7266733AC00C8A918 /* XMDBModelMap.swift */; };
+		E8888EFB266733AC00C8A918 /* XMFMDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8888EF8266733AC00C8A918 /* XMFMDB.swift */; };
 		E8FFA4EB2666392F004B99BB /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8FFA4EA2666392F004B99BB /* FMDB.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +29,9 @@
 		E83C2DEE2660C91400E2B4F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E83C2DF02660C91400E2B4F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E83C2DF72660CAD300E2B4F1 /* Bridgh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridgh.h; sourceTree = "<group>"; };
-		E83C2DF82660CDDC00E2B4F1 /* TestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
+		E8888EF6266733AC00C8A918 /* XMDBModelTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMDBModelTool.swift; sourceTree = "<group>"; };
+		E8888EF7266733AC00C8A918 /* XMDBModelMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMDBModelMap.swift; sourceTree = "<group>"; };
+		E8888EF8266733AC00C8A918 /* XMFMDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMFMDB.swift; sourceTree = "<group>"; };
 		E8FFA4EA2666392F004B99BB /* FMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FMDB.framework; sourceTree = "<group>"; };
 		EDAF6A2094D90C08FBFBFD75 /* Pods_XMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F46F1054AFACA25199405D7E /* Pods-XMDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMDB.release.xcconfig"; path = "Target Support Files/Pods-XMDB/Pods-XMDB.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,7 +104,9 @@
 		E83C2DF62660CAAB00E2B4F1 /* XMDB */ = {
 			isa = PBXGroup;
 			children = (
-				E83C2DF82660CDDC00E2B4F1 /* TestFile.swift */,
+				E8888EF7266733AC00C8A918 /* XMDBModelMap.swift */,
+				E8888EF6266733AC00C8A918 /* XMDBModelTool.swift */,
+				E8888EF8266733AC00C8A918 /* XMFMDB.swift */,
 			);
 			path = XMDB;
 			sourceTree = "<group>";
@@ -227,7 +233,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E83C2DF92660CDDC00E2B4F1 /* TestFile.swift in Sources */,
+				E8888EF9266733AC00C8A918 /* XMDBModelTool.swift in Sources */,
+				E8888EFB266733AC00C8A918 /* XMFMDB.swift in Sources */,
+				E8888EFA266733AC00C8A918 /* XMDBModelMap.swift in Sources */,
 				E83C2DE72660C91100E2B4F1 /* ViewController.swift in Sources */,
 				E83C2DE32660C91100E2B4F1 /* AppDelegate.swift in Sources */,
 			);
