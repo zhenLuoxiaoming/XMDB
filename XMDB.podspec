@@ -50,6 +50,7 @@ Pod::Spec.new do |spec|
       ss.source_files = "XMDB/XMCityCode/*.swift"
       ss.resource = "XMDB/XMCityCode/amap_city_code.db"
       ss.dependency  'XMDB/Core'
+      #ss.public_header_files = "XMDB/XMCityCode/*.swift"
   end
 
   spec.dependency "FMDB", "~> 2.7"

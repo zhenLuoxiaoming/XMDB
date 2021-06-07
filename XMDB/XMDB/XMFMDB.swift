@@ -55,7 +55,8 @@ open class XMFMDB  {
         
     //MARK:获取数据库路径
     public static func getDBUrl(dbname : String) -> URL {
-        if let path = Bundle.main.path(forResource:dbname, ofType:"db") {
+        let p = Bundle(for: self).resourcePath ?? ""
+        if let path = Bundle(path: p)?.path(forResource:dbname, ofType:"db") {
             let fileURL = URL.init(fileURLWithPath: path)
             return fileURL
         }
