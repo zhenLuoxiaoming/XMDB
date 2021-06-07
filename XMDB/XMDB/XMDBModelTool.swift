@@ -103,7 +103,7 @@ open class XMDBModelTool  {
         
         var oldNames = [String]()
         var newNames = [String]()
-        if let database = XMFMDB.openDB(dbname: dbname),let rs = database.getTableSchema(tabelName) {
+        if let database = XMFMDB.openDB(dbname: dbname), let rs = database.getTableSchema(tabelName){
             
             while rs.next() {
                 if let name = rs.string(forColumn: "name"){
