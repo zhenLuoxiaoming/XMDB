@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "XMDB"
-  spec.version      = "0.0.7"
+  spec.version      = "0.0.8"
   spec.summary      = "FMDB封装"
 
 
