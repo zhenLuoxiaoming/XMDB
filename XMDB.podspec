@@ -93,7 +93,7 @@ Pod::Spec.new do |spec|
 
   spec.source_files  = "XMDB/XMDB/*"
   spec.exclude_files = ""
-
+  spec.swift_version = '4.2'
   # spec.public_header_files = "Classes/**/*.h"
 
 
