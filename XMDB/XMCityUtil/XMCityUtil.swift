@@ -1,14 +1,20 @@
 //
-//  XMCityCode.swift
-//  XMDB
+//  XMDBModelTool.swift
+//  HaiLuo
 //
-//  Created by Rowling on 2021/6/7.
+//  Created by Rowling on 2020/6/9.
+//  Copyright © 2020 Rowling. All rights reserved.
 //
 
 import Foundation
 
-open class XMCityCode {
-   public class func getProvince(adcode : String,callBack:@escaping ((_ data : (province:String,city:String,district:String)?)->())) {
+open class XMCityUtil {
+    public struct CityQueryResult {
+        var province : String
+        var city : String
+        var district : String
+    }
+    public class func getAddressInfo(adcode : String,callBack:@escaping ((_ data : CityQueryResult?)->())) {
         let sql = """
             SELECT
             province.name AS province,
@@ -25,7 +31,7 @@ open class XMCityCode {
             AND SUBSTR( province.adcode, 1, 2) = SUBSTR(district.adcode,1, 2)
             AND SUBSTR(city.adcode, 1, 4 ) = SUBSTR( district.adcode, 1, 4 )
         """
-        XMFMDB.excauteQuery(sql: sql, dbname: "amap_city_code") { (rs) in
+        XMFMDB.excauteQuery(sql: sql, dbname: "") { (rs) in
            if let rs = rs {
                while rs.next() {
                 guard let province = rs.string(forColumn: "province"),
@@ -35,25 +41,10 @@ open class XMCityCode {
                     callBack(nil)
                       return
                 }
-                callBack((province,city,district))
+                callBack(CityQueryResult(province: province, city: city, district: district))
               }
            }
         }
     }
-    
-    public class func getCityName(adcode : String,callBack:@escaping ((_ cityName : String?)->())) {
-        let sql = "SELECT name From location WHERE adcode = \(adcode)"
-        XMFMDB.excauteQuery(sql: sql, dbname: "") { (rs) in
-           if let rs = rs {
-               while rs.next() {
-                guard let cityName = rs.string(forColumn: "name")
-                else {
-                    callBack(nil)
-                      return
-                }
-                callBack(cityName)
-              }
-           }
-        }
-    }
+
 }

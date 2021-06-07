@@ -11,7 +11,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        XMCityCode.getProvince(adcode: "110000") { r in
+        XMCityUtil.getAddressInfo(adcode: "110000") { r in
             if let r = r {
                 print(r)
             }

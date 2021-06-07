@@ -17,7 +17,7 @@
 		E8888EFA266733AC00C8A918 /* XMDBModelMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8888EF7266733AC00C8A918 /* XMDBModelMap.swift */; };
 		E8888EFB266733AC00C8A918 /* XMFMDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8888EF8266733AC00C8A918 /* XMFMDB.swift */; };
 		E8BD3B33266DF7F50008548A /* amap_city_code.db in Resources */ = {isa = PBXBuildFile; fileRef = E8BD3B32266DF7F50008548A /* amap_city_code.db */; };
-		E8BD3B35266DF8260008548A /* XMCityCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BD3B34266DF8260008548A /* XMCityCode.swift */; };
+		E8BD3B35266DF8260008548A /* XMCityUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BD3B34266DF8260008548A /* XMCityUtil.swift */; };
 		E8FFA4EB2666392F004B99BB /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8FFA4EA2666392F004B99BB /* FMDB.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +35,7 @@
 		E8888EF7266733AC00C8A918 /* XMDBModelMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMDBModelMap.swift; sourceTree = "<group>"; };
 		E8888EF8266733AC00C8A918 /* XMFMDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMFMDB.swift; sourceTree = "<group>"; };
 		E8BD3B32266DF7F50008548A /* amap_city_code.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = amap_city_code.db; sourceTree = "<group>"; };
-		E8BD3B34266DF8260008548A /* XMCityCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMCityCode.swift; sourceTree = "<group>"; };
+		E8BD3B34266DF8260008548A /* XMCityUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMCityUtil.swift; sourceTree = "<group>"; };
 		E8FFA4EA2666392F004B99BB /* FMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FMDB.framework; sourceTree = "<group>"; };
 		EDAF6A2094D90C08FBFBFD75 /* Pods_XMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F46F1054AFACA25199405D7E /* Pods-XMDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMDB.release.xcconfig"; path = "Target Support Files/Pods-XMDB/Pods-XMDB.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		E83C2DE12660C91100E2B4F1 /* XMDB */ = {
 			isa = PBXGroup;
 			children = (
-				E8BD3B31266DF7C10008548A /* XMCityCode */,
+				E8BD3B31266DF7C10008548A /* XMCityUtil */,
 				E8FFA4E92666392F004B99BB /* Vendors */,
 				E83C2DF72660CAD300E2B4F1 /* Bridgh.h */,
 				E83C2DF62660CAAB00E2B4F1 /* XMDB */,
@@ -116,13 +116,13 @@
 			path = XMDB;
 			sourceTree = "<group>";
 		};
-		E8BD3B31266DF7C10008548A /* XMCityCode */ = {
+		E8BD3B31266DF7C10008548A /* XMCityUtil */ = {
 			isa = PBXGroup;
 			children = (
 				E8BD3B32266DF7F50008548A /* amap_city_code.db */,
-				E8BD3B34266DF8260008548A /* XMCityCode.swift */,
+				E8BD3B34266DF8260008548A /* XMCityUtil.swift */,
 			);
-			path = XMCityCode;
+			path = XMCityUtil;
 			sourceTree = "<group>";
 		};
 		E8FFA4E92666392F004B99BB /* Vendors */ = {
@@ -250,7 +250,7 @@
 			files = (
 				E8888EF9266733AC00C8A918 /* XMDBModelTool.swift in Sources */,
 				E8888EFB266733AC00C8A918 /* XMFMDB.swift in Sources */,
-				E8BD3B35266DF8260008548A /* XMCityCode.swift in Sources */,
+				E8BD3B35266DF8260008548A /* XMCityUtil.swift in Sources */,
 				E8888EFA266733AC00C8A918 /* XMDBModelMap.swift in Sources */,
 				E83C2DE72660C91100E2B4F1 /* ViewController.swift in Sources */,
 				E83C2DE32660C91100E2B4F1 /* AppDelegate.swift in Sources */,

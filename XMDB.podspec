@@ -10,12 +10,12 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "XMDB"
-  spec.version      = "0.0.8"
+  spec.version      = "0.0.9"
   spec.summary      = "FMDB封装"
 
 
   spec.description  = <<-DESC
-            这个就是描述啊啊啊啊
+                对FMDB的封装
                    DESC
 
   spec.homepage     = "https://github.com/zhenLuoxiaoming"
@@ -46,11 +46,10 @@ Pod::Spec.new do |spec|
       cs.source_files  = "XMDB/XMDB/*"
   end
   
-  spec.subspec 'XMCityCode' do |ss|
-      ss.source_files = "XMDB/XMCityCode/*.swift"
-      ss.resource = "XMDB/XMCityCode/amap_city_code.db"
+  spec.subspec 'XMCityUtil' do |ss|
+      ss.source_files = "XMDB/XMCityUtil/*.swift"
+      ss.resource = "XMDB/XMCityUtil/amap_city_code.db"
       ss.dependency  'XMDB/Core'
-      #ss.public_header_files = "XMDB/XMCityCode/*.swift"
   end
 
   spec.dependency "FMDB", "~> 2.7"
