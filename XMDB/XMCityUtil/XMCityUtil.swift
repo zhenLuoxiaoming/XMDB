@@ -10,9 +10,9 @@ import Foundation
 
 open class XMCityUtil {
     public struct CityQueryResult {
-        var province : String
-        var city : String
-        var district : String
+        public var province : String
+        public var city : String
+        public var district : String
     }
     public class func getAddressInfo(adcode : String,callBack:@escaping ((_ data : CityQueryResult?)->())) {
         let sql = """
