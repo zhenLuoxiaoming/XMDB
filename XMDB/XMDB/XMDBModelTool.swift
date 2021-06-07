@@ -103,8 +103,7 @@ open class XMDBModelTool  {
         
         var oldNames = [String]()
         var newNames = [String]()
-        if let database = XMFMDB.openDB(dbname: dbname), let rs = database.getTableSchema(tabelName){
-            
+        if let database = XMFMDB.openDB(dbname: dbname), let rs = dealCocoapodsGetTableSchema(dataBase: database, name: tabelName){
             while rs.next() {
                 if let name = rs.string(forColumn: "name"){
                     oldNames.append(name)
@@ -137,6 +136,10 @@ open class XMDBModelTool  {
         
         sqls.append((renameTableName,nil))
         return XMFMDB.excauteSqlsWithTransaction(sqls: sqls, dbname: dbname)
+    }
+    
+    public static func dealCocoapodsGetTableSchema(dataBase : FMDatabase, name : String) -> FMResultSet? {
+        return dataBase.getTableSchema(name)
     }
 }
 
