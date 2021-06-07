@@ -166,7 +166,7 @@ NS_ASSUME_NONNULL_BEGIN
  @see [table_info](http://www.sqlite.org/pragma.html#pragma_table_info)
  */
 
-- (FMResultSet*)getTableSchema:(NSString*)tableName;
+- (nullable FMResultSet*)getTableSchema:(NSString*)tableName;
 
 /** Test to see if particular column exists for particular table in database
  
