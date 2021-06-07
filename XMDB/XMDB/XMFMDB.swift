@@ -54,8 +54,8 @@ open class XMFMDB  {
     }
         
     //MARK:获取数据库路径
-    public static  func getDBUrl(dbname : String) -> URL {
-        if let path = Bundle.main.path(forResource:"amap_city_code", ofType:"db") {
+    public static func getDBUrl(dbname : String) -> URL {
+        if let path = Bundle.main.path(forResource:dbname, ofType:"db") {
             let fileURL = URL.init(fileURLWithPath: path)
             return fileURL
         }

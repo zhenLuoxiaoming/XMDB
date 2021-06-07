@@ -11,7 +11,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        XMCityCode.getProvince(adcode: "110000") { r in
+            if let r = r {
+                print(r)
+            }
+        }
         // Do any additional setup after loading the view.
     }
 
