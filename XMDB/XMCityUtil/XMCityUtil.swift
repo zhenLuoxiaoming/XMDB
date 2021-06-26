@@ -31,7 +31,7 @@ open class XMCityUtil {
             AND SUBSTR( province.adcode, 1, 2) = SUBSTR(district.adcode,1, 2)
             AND SUBSTR(city.adcode, 1, 4 ) = SUBSTR( district.adcode, 1, 4 )
         """
-        XMFMDB.excauteQuery(sql: sql, dbname: "") { (rs) in
+        XMFMDB.excauteQuery(sql: sql, dbname: "amap_city_code") { (rs) in
            if let rs = rs {
                while rs.next() {
                 guard let province = rs.string(forColumn: "province"),
