@@ -46,5 +46,20 @@ open class XMCityUtil {
            }
         }
     }
+    
+    public class func getCodeInfo(name : String,callBack:@escaping ((_ adcode : Int, _ cityCode : Int)->())) {
+        let sql = """
+            SELECT adcode, citycode FROM location WHERE name = '\(name)'
+        """
+        XMFMDB.excauteQuery(sql: sql, dbname: "amap_city_code") { (rs) in
+           if let rs = rs {
+               while rs.next() {
+                let ac = rs.long(forColumn: "adcode")
+                let cc = rs.long(forColumn: "citycode")
+                callBack(ac,cc)
+              }
+           }
+        }
+    }
 
 }

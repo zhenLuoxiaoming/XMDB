@@ -16,6 +16,12 @@ class ViewController: UIViewController {
                 print(r)
             }
         }
+        
+        XMCityUtil.getCodeInfo(name: "武侯区") { adcode, cityCode in
+            print(adcode)
+            print(cityCode)
+        }
+        
         // Do any additional setup after loading the view.
     }
 
