@@ -13,13 +13,15 @@ open class XMCityUtil {
         public var province : String
         public var city : String
         public var district : String
+        public var citycode : String
     }
     public class func getAddressInfo(adcode : String,callBack:@escaping ((_ data : CityQueryResult?)->())) {
         let sql = """
             SELECT
             province.name AS province,
             city.name AS city,
-            district.name AS district
+            district.name AS district,
+            city.citycode AS citycode
             FROM
             location AS province,
             location AS city,
@@ -36,12 +38,13 @@ open class XMCityUtil {
                while rs.next() {
                 guard let province = rs.string(forColumn: "province"),
                       let city = rs.string(forColumn: "city"),
-                      let district = rs.string(forColumn: "district")
+                      let district = rs.string(forColumn: "district"),
+                      let citycode = rs.string(forColumn: "citycode")
                 else {
                     callBack(nil)
                       return
                 }
-                callBack(CityQueryResult(province: province, city: city, district: district))
+                   callBack(CityQueryResult(province: province, city: city, district: district, citycode: citycode))
               }
            }
         }
@@ -63,3 +66,4 @@ open class XMCityUtil {
     }
 
 }
+
